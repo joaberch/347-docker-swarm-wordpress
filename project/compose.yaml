@@ -1,0 +1,24 @@
+services:
+  db:
+    image: mariadb
+    restart:always
+    environment:
+      MARIADB_ROOT_PASSWORD: pwdExample #TODO SECRET DOCKER
+    volumes:
+      - mariadb:/data
+
+  wordpress:
+    image: wordpress
+    restart: always
+    ports: 8080:80
+    environment:
+      WORDPRESS_DB_HOST: dbExample #TODO SECRET DOCKER
+      WORDPRESS_DB_USER: exampleUser #TODO SECRET DOCKER
+      WORDPRESS_DB_PASSWORD: examplePassword #TODO SECRET DOCKER
+      WORDPRESS_DB_NAME: exampleDB #TODO SECRET DOCKER
+    volumes:
+      - wordpress:/var/www/html
+
+volumes:
+  wordpress:
+  maridadb:
