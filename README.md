@@ -4,7 +4,7 @@
 Déploiement :  
 Connection SSH :  
 ```
-ssh *username*@172.26.1.135
+ssh *username*@172.26.1.23
 ```  
 Création des machines :  
 ```
