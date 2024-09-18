@@ -16,7 +16,7 @@ services:
       replicas: 1
  
   wordpress:
-    image: wordpress
+    image: wordpress:6.6.1-fpm-alpine
     depends_on:
       - db
     volumes:

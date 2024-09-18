@@ -11,7 +11,7 @@ services:
       - mariadb:/data
 
   wordpress:
-    image: wordpress
+    image: wordpress:6.6.1-fpm-alpine
     restart: always
     networks:
       - frontend
