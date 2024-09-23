@@ -1,4 +1,4 @@
-version: '3.8'
+version: '3.8' #https://docs.docker.com/reference/compose-file/deploy/
  
 services:
   db:
@@ -8,12 +8,12 @@ services:
     networks:
       - backend
     environment:
-      MYSQL_ROOT_PASSWORD: root_password_here
+      MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: wordpress
       MYSQL_USER: wordpress
-      MYSQL_PASSWORD: wordpress_password_here
+      MYSQL_PASSWORD: wordpress
     deploy:
-      replicas: 1
+      replicas: 1 #one instance
  
   wordpress:
     image: wordpress
@@ -27,10 +27,10 @@ services:
     environment:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_USER: wordpress
-      WORDPRESS_DB_PASSWORD: wordpress_password_here
+      WORDPRESS_DB_PASSWORD: wordpress
       WORDPRESS_DB_NAME: wordpress
     deploy:
-      replicas: 3
+      replicas: 2 #2 instances
       update_config:
         parallelism: 2
         delay: 10s
@@ -48,7 +48,7 @@ services:
     networks:
       - frontend
     deploy:
-      replicas: 2
+      replicas: 2 #2 instances
  
 networks:
   frontend:
