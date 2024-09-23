@@ -53,6 +53,7 @@ services:
 networks:
   frontend:
     driver: overlay
+    attachable: true
   backend:
     driver: overlay
     attachable: true
