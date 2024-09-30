@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  nginx:
+    image: nginx:1
+    restart: unless-stopped
+    depends_on:
+      - wordpress
+    deploy:
+      replicas: 3
+      update_config:
+        parallelism: 2
+        delay: 10s
+    ports:
+      - "8080:80"    # http
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
