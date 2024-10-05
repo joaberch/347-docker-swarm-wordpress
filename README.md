@@ -24,3 +24,8 @@ Récupérer les adresses IP des machines :
 multipass list
 ```  
 Connexion au machines distantes :  
+```
+multipass shell manager1
+multipass shell worker1
+multipass shell worker2
+```  
