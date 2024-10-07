@@ -3,51 +3,57 @@
 [GitHub](https://github.com/joaberch/347-docker-swarm-wordpress)
 ## Déploiement :  
 Connection SSH :  
-```cmd
+```bash
 ssh *username*@172.26.1.23
 ```
 Création des machines :  
-```cmd
+```bash
 cd scripts
 ```  
-```cmd
+```bash
 sh init-docker-vm.sh manager1
 ```  
-```cmd
+```bash
 sh init-docker-vm.sh worker1
 ```  
-```cmd
+```bash
 sh init-docker-vm.sh worker2
 ```  
 Récupérer les adresses IP des machines :  
-```cmd
+```bash
 multipass list
 ```  
 Connexion au machines distantes :  
-```cmd
+```bash
 multipass shell manager1
 multipass shell worker1
 multipass shell worker2
 ```  
 ## Suppression du swarm
 Lorsque vous êtes connectez à la machine distante avec la commande :
-```cmd
+```bash
 ssh *username*@172.26.1.23
 ```  
 Faites cette commande pour accéder au manager : 
-```cmd
+```bash
 multipass sh manager1
 ``` 
 Pour voir les stacks actifs :
-```cmd
+```bash
 docker stack ls
 ```
 Cela vous répondra quelque chose comme la suivante:
-```cmd
+```bash
   Name
 Nom_stack
 ```
 Avec ce nom faites un
-```cmd
+```bash
 docker stack rm *nom_stack*
+```
+```bash
+docker system prune
+```
+```bash
+docker volume rm *nom_volume
 ```
