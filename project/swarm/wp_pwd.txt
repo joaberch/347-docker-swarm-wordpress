@@ -1,1 +1,1 @@
-wordpress
+root_password_here
