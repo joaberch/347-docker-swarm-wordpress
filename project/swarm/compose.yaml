@@ -4,24 +4,23 @@ services:
   db:
     image: mariadb:11.2
     volumes:
-    #Named volume to persist data in /var/lib/mysql
-      - db_data:/var/lib/mysql
+      - db_data:/var/lib/mysql #Named volume to persist data in /var/lib/mysql
     command: '--default-authentication-plugin=mysql_native_password' #Use authentication plugin
     networks:
       - backend #Use a network to connect with nginx
     ports:
       - 3306:3306 #Expose port to have external connection
     environment:
-      MYSQL_ROOT_PASSWORD: /run/secrets/DB_ROOT_PWD #Defined in another file
+      MYSQL_ROOT_PASSWORD_FILE: /run/secrets/DB_ROOT_PWD #Defined in another file
       MYSQL_DATABASE: wordpress #Name of the database
       MYSQL_USER: wordpress #Name of the user
-      MYSQL_PASSWORD: /run/secrets/DB_PWD #Defined in another file
+      MYSQL_PASSWORD_FILE: /run/secrets/DB_PWD #Defined in another file
     deploy:
       mode: replicated #Replicate the service a certain number of time
       replicas: 1 #Replicate one time
     secrets:
       - DB_PWD #Define secret for user password
-      - DB_ROOT_PWD #Define secret for root passwor
+      - DB_ROOT_PWD #Define secret for root password
 
   wordpress:
     #fpm image works with nginx
