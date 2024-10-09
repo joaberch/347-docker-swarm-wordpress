@@ -6,7 +6,8 @@ Connection SSH :
 ```bash
 ssh *username*@172.26.1.23
 ```
-Création des machines :  
+Dans ce cas ce serait admin347 <br>
+Cette étape est déjà faite, mais dans le cas où tout serait réinitialisé, voici comment créer les machines :  
 ```bash
 cd scripts
 ```  
@@ -55,5 +56,15 @@ docker stack rm *nom_stack*
 docker system prune
 ```
 ```bash
-docker volume rm *nom_volume
+docker volume rm *nom_volume*
 ```
+## Création de la stack
+Vérifier qu'il y a vraiment aucun service qui tourne en faisant :
+```bash
+docker service ls
+```
+Ensuite pour déployer la stack, allez dans la racine où il y a le docker.yaml pour swarm et faites la commande suivante :
+```bash
+docker stack deploy -c compose.yaml *nom_stack*
+```
+Vous pouvez choisir le nom de la stack
