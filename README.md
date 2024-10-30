@@ -43,12 +43,12 @@ Pour voir les stacks actifs :
 ```bash
 docker stack ls
 ```
-Cela vous répondra quelque chose comme la suivante:
+Cela vous répondra quelque chose comme suivant:
 ```bash
   Name
 Nom_stack
 ```
-Avec ce nom faites un
+Avec ce nom faire:
 ```bash
 docker stack rm *nom_stack*
 ```
@@ -58,8 +58,12 @@ docker system prune
 ```bash
 docker volume rm *nom_volume*
 ```
+ou
+```bash
+docker volume prune
+```
 ## Création de la stack
-Vérifier qu'il y a vraiment aucun service qui tourne en faisant :
+Vérifier qu'aucun service ne tourne en faisant :
 ```bash
 docker service ls
 ```
