@@ -1,3 +1,0 @@
-SECRET DOCKER :
-- $ docker run --name some-mysql -e MARIADB_ROOT_PASSWORD_FILE=/run/secrets/mariadb-root -d mariadb:latest
-- https://hub.docker.com/_/mariadb
