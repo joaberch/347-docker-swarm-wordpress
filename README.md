@@ -105,4 +105,4 @@ Vous pouvez choisir le nom de la stack
 
 | <h3><a href="https://github.com/LucasSimoesPolvora">@LucasSimoesPolvora</a></h3> | <h3><a href="https://github.com/JoaBerch">@JoaBerch</a></h3> |
 | ------------- | ------------- |
-| <img src="https://avatars.githubusercontent.com/u/122774951?v=4" style="width: 250"/>  | <img src="https://avatars.githubusercontent.com/u/122774888?v=4" style="width: 250" /> |
+| <img src="https://avatars.githubusercontent.com/u/122774951?v=4" style="width: 250px"/>  | <img src="https://avatars.githubusercontent.com/u/122774888?v=4" style="width: 250px" /> |
