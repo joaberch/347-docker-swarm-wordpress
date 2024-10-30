@@ -101,6 +101,20 @@ docker stack deploy -c compose.yaml *nom_stack*
 ```
 Vous pouvez choisir le nom de la stack
 
+## Nom de domaine DEFI
+Ouvrez l'explorateur de fichier et rendez vous dans 
+```cmd
+C:\Windows\System32\drivers\etc
+```
+Là dedans un fichier "hosts" devrait apparaître, vous l'ouvrez et avant la ligne qui dit 
+```cmd
+# End of section
+```
+Vous écrivez dans une ligne :
+```cmd
+ *addresse_IP* *nom_de_domaine_choisi*
+```
+Allez ensuite dans votre navigateur internet et entrez le nom de domaine que vous avez choisi
 # Authors
 
 | <h3><a href="https://github.com/LucasSimoesPolvora">@LucasSimoesPolvora</a></h3> | <h3><a href="https://github.com/JoaBerch">@JoaBerch</a></h3> |
